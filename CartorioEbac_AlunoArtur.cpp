@@ -123,6 +123,7 @@ int main() //função principal do programa
     	printf("\t1 - Registrar nomes\n");
     	printf("\t2 - Consultar nomes\n");
     	printf("\t3 - Deleta nome\n");
+    	printf("\t4 - Sair do progrma\n");
     	printf("Opção: ");
 
 	
@@ -133,21 +134,26 @@ int main() //função principal do programa
     	switch(opcao) //estrutura switcch para camar a função correpondente a opção escolhida
     	{
     		case 1: //opição 01
-    		registro(); //chama a função de regggistro
-    		break; //intterromper a execução
+    		registro(); //chama a função de registro
+    		break; //interromper a execução
     			
     		case 2: //opição 02
     		consulta(); //chama a função de consulta
-    		break; //intterromper a execução
+    		break; //interromper a execução
     		
     		case 3: //opição 03
     		deleta(); //chama a função de deleta
-    		break; //intterromper a execução
+    		break; //interromper a execução
+    		
+    		case 4: //opção 04
+    		printf("Programa esta sendo encerrado...\n"); //mensagem para o usuário
+    		return 0; //comando para quebrar laço e sunção, forçar o program a fechar
+    		break; //interromper a execução
     		
     		default: //qulaquer outra opição que não esteja listada
     		printf("Essa opção não está disponivel!\n"); //mensagem para opção inválida
     		system("pause"); //pausssa a execução de sistema
-    		break; //intterromper a execução
+    		break; //interromper a execução
     			
 		}
 		    	
