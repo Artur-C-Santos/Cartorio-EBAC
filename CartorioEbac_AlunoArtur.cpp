@@ -107,55 +107,72 @@ int main() //função principal do programa
 {
 	int opcao = 0; //variável para armazenar a opção ecolhida pelo usuário
 	int laco = 1; //variável de controle para loço do menu
+	char senhadigitada[10]="a";
+	int comparacao;
 	
-	for (laco = 1; laco = 1;) //laço de repetição infinita (enquanto laço for 1)
+	printf("---------------------------------\n");
+	printf("###      Cartório da EBAC     ###\n"); 
+	printf("---------------------------------\n");
+	printf("Login de adminstrador!\n\nDigite a seua senha: ");
+	scanf("%s" ,senhadigitada);
+	
+	comparacao = strcmp(senhadigitada, "admin");
+	
+	if(comparacao == 0)
 	{
+		system ("cls");
+		for (laco = 1; laco = 1;) //laço de repetição infinita (enquanto laço for 1)
+		{
 
-    	system("cls"); //Limpa a tela
+    		system("cls"); //Limpa a tela
 		
-		setlocale(LC_ALL, "Portuguese"); //define a localidade para português
+			setlocale(LC_ALL, "Portuguese"); //define a localidade para português
  	
-    	//exibe o menu de opções
-		printf("---------------------------------\n");
-		printf("###      Cartório da EBAC     ###\n"); 
-		printf("---------------------------------\n");
-    	printf("Escolha a opção desejada do menu:\n\n");
-    	printf("\t1 - Registrar nomes\n");
-    	printf("\t2 - Consultar nomes\n");
-    	printf("\t3 - Deleta nome\n");
-    	printf("\t4 - Sair do progrma\n");
-    	printf("Opção: ");
+    		//exibe o menu de opções
+			printf("---------------------------------\n");
+			printf("###      Cartório da EBAC     ###\n"); 
+			printf("---------------------------------\n");
+    		printf("Escolha a opção desejada do menu:\n\n");
+    		printf("\t1 - Registrar nomes\n");
+    		printf("\t2 - Consultar nomes\n");
+    		printf("\t3 - Deleta nome\n");
+    		printf("\t4 - Sair do progrma\n");
+    		printf("Opção: ");
 
 	
-    	scanf("%d", &opcao); //%d refere-sse a armazenar a variavel (lê a opção escolha pelo usuário)
+    		scanf("%d", &opcao); //%d refere-sse a armazenar a variavel (lê a opção escolha pelo usuário)
 	
-    	system("cls"); //limpar a tela 
+    		system("cls"); //limpar a tela 
     	
-    	switch(opcao) //estrutura switcch para camar a função correpondente a opção escolhida
-    	{
-    		case 1: //opição 01
-    		registro(); //chama a função de registro
-    		break; //interromper a execução
+    		switch(opcao) //estrutura switcch para camar a função correpondente a opção escolhida
+    		{
+    			case 1: //opição 01
+    			registro(); //chama a função de registro
+    			break; //interromper a execução
     			
-    		case 2: //opição 02
-    		consulta(); //chama a função de consulta
-    		break; //interromper a execução
+    			case 2: //opição 02
+    			consulta(); //chama a função de consulta
+    			break; //interromper a execução
     		
-    		case 3: //opição 03
-    		deleta(); //chama a função de deleta
-    		break; //interromper a execução
+    			case 3: //opição 03
+    			deleta(); //chama a função de deleta
+    			break; //interromper a execução
     		
-    		case 4: //opção 04
-    		printf("Programa esta sendo encerrado...\n"); //mensagem para o usuário
-    		return 0; //comando para quebrar laço e sunção, forçar o program a fechar
-    		break; //interromper a execução
+    			case 4: //opção 04
+    			printf("Programa esta sendo encerrado...\n"); //mensagem para o usuário
+    			return 0; //comando para quebrar laço e sunção, forçar o program a fechar
+    			break; //interromper a execução
     		
-    		default: //qulaquer outra opição que não esteja listada
-    		printf("Essa opção não está disponivel!\n"); //mensagem para opção inválida
-    		system("pause"); //pausssa a execução de sistema
-    		break; //interromper a execução
+    			default: //qulaquer outra opição que não esteja listada
+    			printf("Essa opção não está disponivel!\n"); //mensagem para opção inválida
+    			system("pause"); //pausssa a execução de sistema
+    			break; //interromper a execução
     			
+			}
 		}
-		    	
     }
+    
+    else
+    
+	printf("Senha invalidada!");
 }
